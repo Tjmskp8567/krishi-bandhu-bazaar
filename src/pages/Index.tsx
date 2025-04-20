@@ -1,13 +1,25 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+
+import MainLayout from "@/components/layouts/MainLayout";
+import HeroSection from "@/components/home/HeroSection";
+import ServicesSection from "@/components/home/ServicesSection";
+import ImpactSection from "@/components/home/ImpactSection";
+import TestimonialsSection from "@/components/home/TestimonialsSection";
+import PartnershipSection from "@/components/home/PartnershipSection";
+import CTASection from "@/components/home/CTASection";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const Index = () => {
+  const { t } = useLanguage();
+
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Your Blank App</h1>
-        <p className="text-xl text-gray-600">Start building your amazing project here!</p>
-      </div>
-    </div>
+    <MainLayout>
+      <HeroSection />
+      <ServicesSection />
+      <ImpactSection />
+      <TestimonialsSection />
+      <PartnershipSection />
+      <CTASection />
+    </MainLayout>
   );
 };
 

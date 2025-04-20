@@ -61,6 +61,34 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				// Agricultural theme colors
+				agri: {
+					green: {
+						light: '#43A047',
+						DEFAULT: '#2E7D32',
+						dark: '#1B5E20'
+					},
+					brown: {
+						light: '#D7CCC8',
+						DEFAULT: '#8D6E63',
+						dark: '#5D4037'
+					},
+					yellow: {
+						light: '#FFF9C4',
+						DEFAULT: '#FFD54F',
+						dark: '#FFC107'
+					},
+					blue: {
+						light: '#BBDEFB',
+						DEFAULT: '#64B5F6',
+						dark: '#1976D2'
+					},
+					gray: {
+						light: '#F5F5F5',
+						DEFAULT: '#9E9E9E',
+						dark: '#616161'
+					}
 				}
 			},
 			borderRadius: {
@@ -84,11 +112,49 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'fade-in': {
+					'0%': {
+						opacity: '0',
+						transform: 'translateY(10px)'
+					},
+					'100%': {
+						opacity: '1',
+						transform: 'translateY(0)'
+					}
+				},
+				'fade-out': {
+					'0%': {
+						opacity: '1',
+						transform: 'translateY(0)'
+					},
+					'100%': {
+						opacity: '0',
+						transform: 'translateY(10px)'
+					}
+				},
+				'scale-in': {
+					'0%': {
+						transform: 'scale(0.95)',
+						opacity: '0'
+					},
+					'100%': {
+						transform: 'scale(1)',
+						opacity: '1'
+					}
+				},
+				'slide-in-right': {
+					'0%': { transform: 'translateX(100%)' },
+					'100%': { transform: 'translateX(0)' }
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'fade-in': 'fade-in 0.3s ease-out',
+				'fade-out': 'fade-out 0.3s ease-out',
+				'scale-in': 'scale-in 0.2s ease-out',
+				'slide-in-right': 'slide-in-right 0.3s ease-out'
 			}
 		}
 	},
